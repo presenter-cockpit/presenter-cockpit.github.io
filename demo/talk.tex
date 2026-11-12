@@ -1,0 +1,100 @@
+% Demo talk for Presenter Cockpit (screenshots and "try it" download). Invented content.
+% Build: pdflatex talk.tex (twice). Notes for the presenter: talk.pdfpc (PDFPC format).
+\documentclass[aspectratio=169]{beamer}
+\usetheme{metropolis}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{listings}
+\usepackage{booktabs}
+\lstset{language=Python, basicstyle=\ttfamily\small, keywordstyle=\color{mDarkTeal}\bfseries,
+  commentstyle=\color{gray}, columns=fullflexible, showstringspaces=false}
+\title{Binary search, step by step}
+\subtitle{Finding a value in a sorted list}
+\author{Demo talk}
+\date{}
+
+\newcommand{\cells}[1]{%
+  \foreach \v [count=\i from 0] in {3,8,12,17,23,31,42,56} {
+    \node[draw, minimum width=1.1cm, minimum height=0.9cm, fill=#1] (c\i) at (\i*1.2,0) {\v};
+  }}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Plan}
+  \begin{itemize}
+    \item<1-> The problem: is a value in a sorted list?
+    \item<2-> The idea: look in the middle, then throw away half
+    \item<3-> The code, and how fast it is
+  \end{itemize}
+\end{frame}
+
+\section{The idea}
+
+\begin{frame}{Looking for 23}
+  \centering
+  \begin{tikzpicture}
+    \cells{white}
+    \only<1>{\node[above=3mm of c0] {low}; \node[above=3mm of c7] {high};}
+    \only<2>{\node[draw, fill=mLightBrown!40, minimum width=1.1cm, minimum height=0.9cm] at (c3) {17};
+             \node[above=3mm of c3] {middle: $17 < 23$};}
+    \only<3>{\foreach \i in {0,...,3} \node[fill=gray!30, minimum width=1.1cm, minimum height=0.9cm, draw] at (c\i) {};
+             \node[draw, fill=mLightGreen!50, minimum width=1.1cm, minimum height=0.9cm] at (c4) {23};
+             \node[above=3mm of c4] {found in 3 steps};}
+  \end{tikzpicture}
+  \vspace{1em}
+
+  Each step halves the part of the list that is left.
+\end{frame}
+
+\section{In code}
+
+\begin{frame}[fragile]{A few lines of Python}
+\begin{lstlisting}
+def binary_search(items, target):
+    low, high = 0, len(items) - 1
+    while low <= high:
+        middle = (low + high) // 2
+        if items[middle] == target:
+            return middle
+        if items[middle] < target:
+            low = middle + 1      # keep the right half
+        else:
+            high = middle - 1     # keep the left half
+    return -1                     # not in the list
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}{How fast is it?}
+  \centering
+  \begin{tabular}{rr}
+    \toprule
+    Items in the list & Steps at most \\
+    \midrule
+    8 & 3 \\
+    1\,000 & 10 \\
+    1\,000\,000 & 20 \\
+    1\,000\,000\,000 & 30 \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{1em}
+  Double the list: just one more step.
+\end{frame}
+
+\section{Wrap up}
+
+\begin{frame}{Takeaways}
+  \begin{itemize}
+    \item<1-> Works only on \alert{sorted} lists
+    \item<2-> One comparison removes half of the candidates
+    \item<3-> Try it: \texttt{code/binary\_search.py}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[standout]
+  Questions?
+\end{frame}
+
+\end{document}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" role="img" aria-label="Presenter Cockpit">
+  <rect width="108" height="108" rx="26" fill="#263238"/>
+  <g transform="translate(54 54) scale(1.12) translate(-54 -54)">
+    <path fill="#ECEFF1" d="M31,32h46a5,5 0,0 1,5 5v28a5,5 0,0 1,-5 5H31a5,5 0,0 1,-5 -5V37a5,5 0,0 1,5 -5z"/>
+    <path fill="#90A4AE" d="M48,70h12v4h-12z M43.5,74h21a1.5,1.5 0,0 1,0 3h-21a1.5,1.5 0,0 1,0 -3z"/>
+    <path d="M32,39l5,4.5 -5,4.5 M40,48h7" fill="none" stroke="#00897B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M33,62c4,-8 8,-8 10,-3.5s6,4.5 15,-8" fill="none" stroke="#E53935" stroke-width="3.4" stroke-linecap="round"/>
+    <path fill="#E53935" d="M64,46h11l6,6v18a3,3 0,0 1,-3 3H64a3,3 0,0 1,-3 -3V49a3,3 0,0 1,3 -3z"/>
+    <path fill="#FFCDD2" d="M75,46v4a2,2 0,0 0,2 2h4z"/>
+    <path transform="translate(63.2 58) scale(0.7)" d="M0,9V0h3.2a2.4,2.4 0,0 1,0 4.8H0 M7.2,0v9h2.3a3.6,3.6 0,0 0,3.6 -3.6V3.6A3.6,3.6 0,0 0,9.5 0z M16.6,9V0h4.6 M16.6,4.4h3.8" fill="none" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

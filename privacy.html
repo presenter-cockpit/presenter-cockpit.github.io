@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy – Presenter Cockpit</title>
+  <meta name="description" content="Privacy policy of Presenter Cockpit: what the app does with your data.">
+  <meta name="theme-color" content="#0b1418">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/icon-180.png">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script defer src="assets/js/site.js"></script>
+</head>
+<body>
+
+<header class="nav scrolled">
+  <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="" width="34" height="34"><span>Presenter Cockpit</span></a>
+  <nav class="nav-links nav-links-static"><a href="index.html">Home</a><a href="index.html#download" class="btn btn-small">Download</a></nav>
+</header>
+
+<main class="doc">
+  <p class="eyebrow">Privacy policy</p>
+  <h1>Your data stays on your tablet</h1>
+  <p class="updated">Last updated: November 12, 2026</p>
+
+  <p>Presenter Cockpit is an Android app to present PDF files from a tablet. This page explains what happens to your data
+    when you use it. In short: the app has no account, no ads and no analytics of its own, and it does not send your files
+    or your notes to us or to anyone else. One feature, handwriting to text, uses a library by Google: see below.</p>
+
+  <h2>What the app does not do</h2>
+  <ul>
+    <li>It does not ask you to create an account.</li>
+    <li>It does not show ads.</li>
+    <li>It has no tracking or statistics code of its own.</li>
+    <li>The authors of the app do not receive any of your data: there is no server of ours.</li>
+  </ul>
+
+  <h2>What stays on your tablet</h2>
+  <p>Everything you create stays on your device, in your files or in the app's private storage:</p>
+  <ul>
+    <li>your annotations, saved inside your PDF files;</li>
+    <li>the open documents, pages and unsaved annotations, so the app can reopen them as you left them;</li>
+    <li>your workspaces, tools and settings;</li>
+    <li>the servers you add, the app's SSH key (kept in the tablet's secure storage) and, if you choose to save them,
+      server passwords, encrypted and unlocked only with your fingerprint;</li>
+    <li>copies of PDFs opened from a server, so you can work without the network.</li>
+  </ul>
+  <p>Uninstalling the app deletes its private storage. Your PDF files stay where they are.</p>
+
+  <h2>When the app uses the network</h2>
+  <p>The app connects to the network only when you ask it to:</p>
+  <ul>
+    <li><strong>Servers you add</strong>: code, terminal and PDF tabs connect over SSH to the servers you configure.
+      Those connections go directly from your tablet to your server.</li>
+    <li><strong>Web pages</strong>: links you open in a web tab are loaded from their websites, which have their own
+      privacy policies.</li>
+    <li><strong>Handwriting to text</strong> (GitHub and Google Play versions only): this feature uses ML Kit, a library
+      made by Google. The first time you use it for a language, the app downloads the recognition model from Google.
+      Recognition then happens on the tablet: your handwriting is not sent to Google. ML Kit may send Google diagnostic and
+      usage information, as described in the <a href="https://developers.google.com/ml-kit/terms">ML Kit terms</a> and in
+      <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</li>
+  </ul>
+  <p>The <strong>F-Droid version</strong> does not contain ML Kit and connects only to the servers and web pages you open.</p>
+
+  <h2>Permissions</h2>
+  <ul>
+    <li><strong>All files access</strong> (GitHub and F-Droid versions): to browse your folders, find the presenter notes
+      next to your PDFs and save annotations into the original files. The Google Play version only uses the folders you
+      choose.</li>
+    <li><strong>Internet and network state</strong>: for the connections described above.</li>
+    <li><strong>Fingerprint</strong>: to unlock the SSH key and saved passwords.</li>
+    <li><strong>Screen recording detection</strong> (Android 15 and later): to tell you when the screen is being shared,
+      so you can show only the slides. The app does not record anything.</li>
+    <li><strong>Do not disturb</strong> (only if you allow it): to silence notifications while a screen is connected, and
+      turn them back on afterwards. The app does not read your notifications.</li>
+  </ul>
+
+  <h2>Where you download it</h2>
+  <p>If you install the app from Google Play or F-Droid, the store may collect data about your download according to its
+    own privacy policy. Downloading the APK from GitHub is subject to GitHub's privacy policy.</p>
+
+  <h2>Children</h2>
+  <p>The app does not collect personal data from anyone, children included.</p>
+
+  <h2>Changes and contact</h2>
+  <p>If this policy changes, the new version will be published on this page, with a new date. For questions, open an issue
+    on the <a data-link="issues" href="#">project page</a>.</p>
+</main>
+
+<footer class="footer">
+  <div class="brand"><img src="assets/img/logo.svg" alt="" width="28" height="28"><span>Presenter Cockpit</span></div>
+  <p class="small"><a href="index.html">Home</a> · <a href="privacy.html">Privacy</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+ "pdfpcFormat": 2,
+ "disableMarkdown": false,
+ "pages": [
+  {
+   "idx": 1,
+   "label": "1",
+   "overlay": 0,
+   "note": "- Ask the room: how would you look up a word in a paper dictionary?\n- Nobody starts from page one."
+  },
+  {
+   "idx": 5,
+   "label": "2",
+   "overlay": 0,
+   "note": "- **Walk through it slowly**: low, high, middle.\n- Tap for the next step; the ink stays on all the steps of the slide.\n- 17 is smaller than 23, so the whole left half is gone."
+  },
+  {
+   "idx": 9,
+   "label": "3",
+   "overlay": 0,
+   "note": "- Point at `middle = (low + high) // 2` with the laser.\n- Open `code/binary_search.py` in a code tab and run the tests in the terminal."
+  },
+  {
+   "idx": 10,
+   "label": "4",
+   "overlay": 0,
+   "note": "- Each row is a thousand times larger, but needs only 10 more steps."
+  },
+  {
+   "idx": 12,
+   "label": "5",
+   "overlay": 0,
+   "note": "- The list **must** be sorted: otherwise the answer is wrong, not just slow.\n- Questions next."
+  }
+ ]
+}
